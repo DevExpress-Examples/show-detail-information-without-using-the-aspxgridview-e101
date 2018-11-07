@@ -1,10 +1,10 @@
 <%-- BeginRegion TagPrefix and page properties --%>
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="Grid_MasterDetail_ShowDetailInfo_ShowDetailInfo" %>
-<%@ Register Assembly="DevExpress.Web.ASPxEditors.v8.1" Namespace="DevExpress.Web.ASPxEditors"  TagPrefix="dxe" %>
-<%@ Register Assembly="DevExpress.Web.ASPxGridView.v8.1" Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dxwgv" %>
-<%@ Register Assembly="DevExpress.Web.v8.1" Namespace="DevExpress.Web.ASPxPager" TagPrefix="dxwp" %>
-<%@ Register Assembly="DevExpress.Web.v8.1" Namespace="DevExpress.Web.ASPxTabControl" TagPrefix="dxtc" %>
-<%@ Register Assembly="DevExpress.Web.v8.1" Namespace="DevExpress.Web.ASPxClasses" TagPrefix="dxw" %>
+<%@ Register Assembly="DevExpress.Web.v13.1" Namespace="DevExpress.Web.ASPxEditors"  TagPrefix="dxe" %>
+<%@ Register Assembly="DevExpress.Web.v13.1" Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dxwgv" %>
+<%@ Register Assembly="DevExpress.Web.v13.1" Namespace="DevExpress.Web.ASPxPager" TagPrefix="dxwp" %>
+<%@ Register Assembly="DevExpress.Web.v13.1" Namespace="DevExpress.Web.ASPxTabControl" TagPrefix="dxtc" %>
+<%@ Register Assembly="DevExpress.Web.v13.1" Namespace="DevExpress.Web.ASPxClasses" TagPrefix="dxw" %>
 
 <%-- EndRegion --%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -30,7 +30,7 @@
                 <dxtc:ASPxPageControl runat="server" ID="pageControl" Width="100%">
                 <TabPages>
                     <dxtc:TabPage Text="Orders" Visible="true">
-                        <Controls>
+                        <ContentCollection><dxw:ContentControl runat="server">
                             <dxwgv:ASPxGridView ID="ordersGrid" runat="server" DataSourceID="ordersDataSource" 
                                 KeyFieldName="OrderID" Width="100%" OnBeforePerformDataSelect="ordersGrid_DataSelect" >
                                 <%-- BeginRegion Grid Columns --%>
@@ -47,10 +47,10 @@
                                 </Columns>
                                 <%-- EndRegion --%>
                             </dxwgv:ASPxGridView>
-                        </Controls>
+                        </dxw:ContentControl></ContentCollection>
                     </dxtc:TabPage>
                     <dxtc:TabPage Text="Supplier Info (using the HtmlRowCreated event)"  Visible="true">
-                        <Controls>
+                        <ContentCollection><dxw:ContentControl runat="server">
                             <div>Using the HtmlRowCreated event</div>
                             <table cellpadding="3" cellspacing="4" style="font-size:x-small">
                                 <tr>
@@ -67,10 +67,10 @@
                                 </tr>
                             </table>
                             
-                        </Controls>
+                        </dxw:ContentControl></ContentCollection>
                     </dxtc:TabPage>
                     <dxtc:TabPage Text="Supplier Info (using the Server Tags)"  Visible="true">
-                        <Controls>
+                        <ContentCollection><dxw:ContentControl runat="server">
                             <div>Using the Server Tags</div>
                             <table cellpadding="3" cellspacing="4" style="font-size:x-small">
                                 <tr>
@@ -87,7 +87,7 @@
                                 </tr>
                             </table>
                             
-                        </Controls>
+                        </dxw:ContentControl></ContentCollection>
                     </dxtc:TabPage>
                 </TabPages>
             </dxtc:ASPxPageControl>
