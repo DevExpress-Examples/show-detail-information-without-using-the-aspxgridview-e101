@@ -5,6 +5,9 @@
 * [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
 <!-- default file list end -->
 # Show detail information without using the ASPxGridView
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/e101/)**
+<!-- run online end -->
 
 
 <p>This example demonstrates how to show custom data within detail sections.<br />
